@@ -32,12 +32,12 @@ class TopAppDetailVC: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/YYYY"
         if let date = topApp?.releaseDate {
-            releaseDate?.text = dateFormatter.string(from: date)
+            releaseDate?.text = "Release Date: \(dateFormatter.string(from: date))"
         }
         summary?.text = topApp?.summary
         category?.text = "Category: \(topApp?.category ?? "N/A")"
         appPrice?.text = "Price: \(topApp?.price ?? "N/A")"
-        publisher?.text = "Publisher \(topApp?.publisher?.name ?? "N/A")"
+        publisher?.text = "Publisher: \(topApp?.publisher?.name ?? "N/A")"
         
         if let icon = topApp?.appIcon {
             appIcon?.sd_setImage(with: URL(string: icon), completed: nil)
