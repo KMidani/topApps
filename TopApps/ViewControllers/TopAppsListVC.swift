@@ -21,8 +21,12 @@ class TopAppsListVC: UIViewController,UITableViewDelegate,UITableViewDataSource 
     
     func loadAppsList (){
         TAApiManager.fetchTopApps(){ applist , error in
-            self.topApps = applist
-            self.tableView?.reloadData()
+            if let error = error {
+                print("\(error.localizedDescription)")
+            }else {
+                self.topApps = applist
+                self.tableView?.reloadData()
+            }
         }
     }
     

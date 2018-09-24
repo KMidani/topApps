@@ -28,7 +28,6 @@ class TAApiManager {
                 let mapped = Mapper<TopApp>().mapArray(JSONString: topApps!)
                 
                 DispatchQueue.main.async {
-                    //what ever is here
                     completion(mapped!,nil)
                 }
             }
