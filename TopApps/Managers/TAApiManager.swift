@@ -23,12 +23,25 @@ class TAApiManager {
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 
-                let json = try! JSON(data: data)
-                let topApps = json["feed"]["entry"].rawString()
+                let json = try? JSON(data: data)
+                
+                guard let parsedJson = json else {
+                    let parsingError = NSError(domain:"Custom App Error", code:1001, userInfo:nil)
+                    completion([],parsingError)
+                    return
+                }
+                
+                let topApps = parsedJson["feed"]["entry"].rawString()
+                
                 let mapped = Mapper<TopApp>().mapArray(JSONString: topApps!)
+                guard let mappedList = mapped else {
+                    let parsingError = NSError(domain:"Custom App Error", code:1002, userInfo:nil)
+                    completion([],parsingError)
+                    return
+                }
                 
                 DispatchQueue.main.async {
-                    completion(mapped!,nil)
+                    completion(mappedList,nil)
                 }
             }
         }
