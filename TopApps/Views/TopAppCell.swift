@@ -37,8 +37,6 @@ class TopAppCell: UITableViewCell {
         if let thumbnail = topApp.thumbnail {
             icon?.sd_setImage(with: URL(string: thumbnail), completed: nil)
         }
-        
-        
     }
 
 }
