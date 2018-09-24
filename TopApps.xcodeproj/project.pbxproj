@@ -149,17 +149,15 @@
 		BC9FBEC021574CEB00861DD6 /* TopApps */ = {
 			isa = PBXGroup;
 			children = (
+				BC9FBECD21574CEF00861DD6 /* Info.plist */,
+				BC9FBEC821574CEF00861DD6 /* Assets.xcassets */,
+				BC9FBEC121574CEB00861DD6 /* AppDelegate.swift */,
 				BC9FBEF9215750EE00861DD6 /* Constatns */,
 				BC9FBEF321574DDD00861DD6 /* StoryBoards */,
-				BC9FBEC121574CEB00861DD6 /* AppDelegate.swift */,
 				BC9FBEF221574DC600861DD6 /* Managers */,
 				BC9FBEF121574DBA00861DD6 /* Models */,
 				BC9FBEF021574DAC00861DD6 /* Views */,
 				BC9FBEEF21574D9500861DD6 /* ViewControllers */,
-				BC9FBEC521574CEB00861DD6 /* Main.storyboard */,
-				BC9FBEC821574CEF00861DD6 /* Assets.xcassets */,
-				BC9FBECA21574CEF00861DD6 /* LaunchScreen.storyboard */,
-				BC9FBECD21574CEF00861DD6 /* Info.plist */,
 			);
 			path = TopApps;
 			sourceTree = "<group>";
@@ -219,6 +217,8 @@
 		BC9FBEF321574DDD00861DD6 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				BC9FBECA21574CEF00861DD6 /* LaunchScreen.storyboard */,
+				BC9FBEC521574CEB00861DD6 /* Main.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -631,7 +631,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZWGJ39VB8Q;
 				INFOPLIST_FILE = TopApps/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.TopApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -647,7 +650,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZWGJ39VB8Q;
 				INFOPLIST_FILE = TopApps/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.TopApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -664,7 +670,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZWGJ39VB8Q;
 				INFOPLIST_FILE = TopAppsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.topApps.TopAppsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -682,7 +692,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZWGJ39VB8Q;
 				INFOPLIST_FILE = TopAppsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.topApps.TopAppsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -699,7 +713,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZWGJ39VB8Q;
 				INFOPLIST_FILE = TopAppsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.topApps.TopAppsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -716,7 +734,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZWGJ39VB8Q;
 				INFOPLIST_FILE = TopAppsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.topApps.TopAppsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
